@@ -1,0 +1,33 @@
+public class FindGene
+{
+
+    public String findGene(String dna) 
+    {
+        String result = "";
+        int startIndex = dna.indexOF("ATG");
+        int stopIndex = dna.indexOf("TAA", startIndex + 3);
+        result = dna.substring(startIndex, stopIndex + 3);
+        return result;
+    }
+    
+    public void testFindGene()
+    {
+        String dna = "AATGCGTAATATGGT";
+        System.out.println("DNA strand is " + dna);
+        String gene = findGene(dna);
+        System. out.println("Gene is " + gene);
+        
+        dna = "AATGCTAGGGTAATATGGT";
+        System.out.println("DNA strand is " + dna);
+        String gene = findGene(dna);
+        System. out.println("Gene is " + gene
+        
+        dna = "ATCCTATGCTTCGGCTGCTCTAATATGGT";
+        System.out.println("DNA strand is " + dna);
+        String gene = findGene(dna);
+        System. out.println("Gene is " + gene 
+    }
+
+
+
+}
